@@ -1,4 +1,4 @@
-# 🚀 UET Explorer
+# UET Explorer
 
 > **Enterprise-Grade Interactive Technical Architecture Visualizer for Ultra Ethernet Transport — The Next-Generation Network Protocol Reimagining High-Performance Distributed Systems**
 
@@ -15,92 +15,92 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-8.0.1-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
 
-**[🌐 Live Demo](https://uet-explorer.vercel.app/) · [📖 Read the Spec](https://ueconference.org/specifications) · [🐙 GitHub](https://github.com/Necromancer0912/UET-Explorer) · [💬 Discussions](https://github.com/Necromancer0912/UET-Explorer/discussions)**
+**[Live Demo](https://uet-explorer.vercel.app/) · [Read the Spec](https://ueconference.org/specifications) · [GitHub](https://github.com/Necromancer0912/UET-Explorer) · [Discussions](https://github.com/Necromancer0912/UET-Explorer/discussions)**
 
 </div>
 
 ---
 
-## 📑 Comprehensive Table of Contents
+## Comprehensive Table of Contents
 
 ### Core Sections
 
-- [🌟 Executive Overview](#-executive-overview)
-- [🚀 What is Ultra Ethernet Transport?](#-what-is-ultra-ethernet-transport-uet)
-- [✨ Feature Showcase](#-feature-showcase)
-- [🏗️ System Architecture](#-system-architecture)
-- [📦 Complete Tech Stack](#-complete-tech-stack)
+- [Executive Overview](#-executive-overview)
+- [What is Ultra Ethernet Transport?](#-what-is-ultra-ethernet-transport-uet)
+- [Feature Showcase](#-feature-showcase)
+- [System Architecture](#-system-architecture)
+- [Complete Tech Stack](#-complete-tech-stack)
 
 ### Getting Started
 
-- [⚡ Quick Start Guide](#-quick-start-guide)
-- [🔧 Detailed Installation](#-detailed-installation)
-- [🖥️ Development Environment Setup](#-development-environment-setup)
-- [🧪 Running Examples](#-running-examples)
+- [Quick Start Guide](#-quick-start-guide)
+- [Detailed Installation](#-detailed-installation)
+- [Development Environment Setup](#-development-environment-setup)
+- [Running Examples](#-running-examples)
 
 ### Development & Advanced
 
-- [🛠️ Development Workflow](#-development-workflow)
-- [📝 Code Structure & Organization](#-code-structure--organization)
-- [🎨 Component Development Guide](#-component-development-guide)
-- [🔄 Data Model & State Management](#-data-model--state-management)
-- [⚙️ Advanced Configuration](#-advanced-configuration)
-- [🔍 Performance Optimization](#-performance-optimization)
+- [Development Workflow](#-development-workflow)
+- [Code Structure & Organization](#-code-structure--organization)
+- [Component Development Guide](#-component-development-guide)
+- [Data Model & State Management](#-data-model--state-management)
+- [Advanced Configuration](#-advanced-configuration)
+- [Performance Optimization](#-performance-optimization)
 
 ### Deployment & Production
 
-- [🌐 Deployment Strategies](#-deployment-strategies)
-- [🔐 Production Security](#-production-security)
-- [📊 Monitoring & Analytics](#-monitoring--analytics)
-- [🚨 Troubleshooting Guide](#-troubleshooting-guide)
+- [Deployment Strategies](#-deployment-strategies)
+- [Production Security](#-production-security)
+- [Monitoring & Analytics](#-monitoring--analytics)
+- [Troubleshooting Guide](#-troubleshooting-guide)
 
 ### Technical Deep Dives
 
-- [📚 UET Protocol Deep Dive](#-uet-protocol-deep-dive)
-- [🔗 Complete Resource Library](#-complete-resource-library)
-- [📖 Component Reference Documentation](#-component-reference-documentation)
-- [❓ Comprehensive FAQ](#-comprehensive-faq)
+- [UET Protocol Deep Dive](#-uet-protocol-deep-dive)
+- [Complete Resource Library](#-complete-resource-library)
+- [Component Reference Documentation](#-component-reference-documentation)
+- [Comprehensive FAQ](#-comprehensive-faq)
 
 ### Contributing & Community
 
-- [🤝 Contributing Guidelines](#-contributing-guidelines)
-- [📄 Licensing & Legal](#-licensing--legal)
-- [🙏 Acknowledgments](#-acknowledgments)
+- [Contributing Guidelines](#-contributing-guidelines)
+- [Licensing & Legal](#-licensing--legal)
+- [Acknowledgments](#-acknowledgments)
 
 ---
 
-## 🌟 Overview
+## Overview
 
 **UET Explorer** is an interactive, visually-rich web application that demystifies the Ultra Ethernet Transport (UET) protocol stack. It serves as:
 
-- 🎓 **Educational Tool**: Learn the UET architecture through hierarchical visual exploration
-- 🔍 **Technical Reference**: Deep-dive into each layer with comprehensive technical documentation
-- 📊 **Architecture Visualizer**: See how components interact within the 5-layer model
-- 🎨 **Interactive Dashboard**: Expand/collapse component groups, drill down into specifications
+- **Educational Tool**: Learn the UET architecture through hierarchical visual exploration
+- **Technical Reference**: Deep-dive into each layer with comprehensive technical documentation
+- **Architecture Visualizer**: See how components interact within the 5-layer model
+- **Interactive Dashboard**: Expand/collapse component groups, drill down into specifications
 
 Designed for **network engineers**, **systems architects**, **hardware designers**, and **ML platform teams** working with AI cluster networking.
 
 ---
 
-## 🎯 What is Ultra Ethernet Transport?
+## What is Ultra Ethernet Transport?
 
 ### The Problem It Solves
 
 Traditional networking stacks (TCP/IP, even RDMA) were designed for **general-purpose computing**:
 
-- ❌ Kernel context switching overhead (microseconds)
-- ❌ Slow-start congestion control (milliseconds for AI training)
-- ❌ Connection setup costs (hundreds of microseconds)
-- ❌ Head-of-line blocking in packet loss scenarios
-- ❌ Single-path routing (cannot exploit multi-path Clos fabrics)
+- Kernel context switching overhead (microseconds)
+- Slow-start congestion control (milliseconds for AI training)
+- Connection setup costs (hundreds of microseconds)
+- Head-of-line blocking in packet loss scenarios
+- Single-path routing (cannot exploit multi-path Clos fabrics)
 
 **Modern AI & HPC demands:**
 
-- ✅ Sub-microsecond latency (needed for synchronized GPU training)
-- ✅ 400+ Gbps throughput per NIC
-- ✅ Nanosecond-scale credit-based congestion control
-- ✅ Per-packet multipath spraying across leaf-spine fabrics
-- ✅ Native RDMA with hardware memory management
+- Sub-microsecond latency (needed for synchronized GPU training)
+- 400+ Gbps throughput per NIC
+- Nanosecond-scale credit-based congestion control
+- Per-packet multipath spraying across leaf-spine fabrics
+- Native RDMA with hardware memory management
 
 ### UET's Solution
 
@@ -110,7 +110,7 @@ Traditional networking stacks (TCP/IP, even RDMA) were designed for **general-pu
 ┌─────────────────────────────────────────────────────┐
 │ Application (PyTorch, NCCL, MPI, JAX)               │
 ├─────────────────────────────────────────────────────┤
-│ Libfabric v2.0 (OFI Provider) — User-Space         │
+│ Libfabric v2.0 (OFI Provider) — User-Space          │
 ├─────────────────────────────────────────────────────┤
 │ UET NIC Driver (Control Path Only)                  │
 ├─────────────────────────────────────────────────────┤
@@ -128,16 +128,16 @@ Traditional networking stacks (TCP/IP, even RDMA) were designed for **general-pu
 
 ---
 
-## ✨ Features
+## Features
 
-### 🌳 Interactive Architecture Tree
+### Interactive Architecture Tree
 
 - **Hierarchical Expansion**: Click to expand/collapse component groups
 - **Visual Hierarchy**: Depth-coded grayscale shading for layer visualization
 - **Connector Lines**: Tree structure lines showing parent-child relationships
 - **Badge Counts**: See child component count per group at a glance
 
-### 📖 Multi-Level Documentation
+### Multi-Level Documentation
 
 Each component provides three levels of detail:
 
@@ -145,15 +145,15 @@ Each component provides three levels of detail:
 2. **Long Description** (full paragraph): Technical context and design rationale
 3. **Technical Details** (structured facts): Implementation specifics, algorithms, and standards
 
-### 🎨 Modern UI/UX
+### Modern UI/UX
 
-- ✅ Responsive design (desktop to tablet)
-- ✅ Smooth expand/collapse animations (Framer Motion)
-- ✅ Dark-friendly grayscale palette
-- ✅ Component navigation via React Router
-- ✅ 3D visual accents (Three.js scenes for layer visualization)
+- Responsive design (desktop to tablet)
+- Smooth expand/collapse animations (Framer Motion)
+- Dark-friendly grayscale palette
+- Component navigation via React Router
+- 3D visual accents (Three.js scenes for layer visualization)
 
-### 🔍 Direct Navigation
+### Direct Navigation
 
 Click any component name to jump to its detailed specification page with:
 
@@ -162,7 +162,7 @@ Click any component name to jump to its detailed specification page with:
 - Related components
 - Standard references (IEEE, IETF, UEC)
 
-### 📱 Mobile Optimized
+### Mobile Optimized
 
 - Responsive layout adapts to all screen sizes
 - Touch-friendly expand/collapse controls
@@ -170,7 +170,7 @@ Click any component name to jump to its detailed specification page with:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ### Application Structure
 
@@ -213,7 +213,7 @@ The entire UET architecture is modeled as a recursive tree structure with multi-
 
 ---
 
-## 📦 Tech Stack
+## Tech Stack
 
 | Layer               | Technology    | Version | Purpose                  |
 | ------------------- | ------------- | ------- | ------------------------ |
@@ -229,7 +229,7 @@ The entire UET architecture is modeled as a recursive tree structure with multi-
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -266,7 +266,7 @@ npm run dev
 
 ---
 
-## 🛠️ Development
+## Development
 
 ### Project Scripts
 
@@ -307,7 +307,7 @@ To add a new component to the UET hierarchy:
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 ### Deploy to Vercel (Recommended)
 
@@ -339,7 +339,7 @@ vercel --prod
 
 ---
 
-## 📚 UET Technical Deep Dive
+## UET Technical Deep Dive
 
 ### The 5-Layer UET Model
 
@@ -407,25 +407,25 @@ UET defines a complete networking stack across 5 layers:
 
 ---
 
-## 🔗 Resources & References
+## Resources & References
 
 ### Official Documentation
 
-- 🌐 [Ultra Ethernet Consortium](https://ueconference.org/)
-- 📄 [UEC Specification v1.0.2](https://ueconference.org/specifications)
-- 🏢 [Linux Foundation](https://www.linuxfoundation.org/)
-- 📊 [UEC White Papers](https://ueconference.org/resources/whitepapers)
+- [Ultra Ethernet Consortium](https://ueconference.org/)
+- [UEC Specification v1.0.2](https://ueconference.org/specifications)
+- [Linux Foundation](https://www.linuxfoundation.org/)
+- [UEC White Papers](https://ueconference.org/resources/whitepapers)
 
 ### Implementation References
 
-- 🔌 [Libfabric (OFI)](https://ofiwg.github.io/libfabric/)
-- 🐍 [NCCL](https://github.com/NVIDIA/nccl)
-- 🧬 [PyTorch Distributed](https://pytorch.org/docs/stable/distributed.html)
-- 📦 [OpenMPI](https://www.open-mpi.org/)
+- [Libfabric (OFI)](https://ofiwg.github.io/libfabric/)
+- [NCCL](https://github.com/NVIDIA/nccl)
+- [PyTorch Distributed](https://pytorch.org/docs/stable/distributed.html)
+- [OpenMPI](https://www.open-mpi.org/)
 
 ---
 
-## ❓ FAQ
+## FAQ
 
 **Q: Is UET production-ready?**
 A: Yes. Specification v1.0 released June 2025. NVIDIA/AMD shipping UET NPUs in 2026.
@@ -444,20 +444,20 @@ A: Complete UET Explorer source. Build, test, and deploy locally or on Vercel.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Areas of interest:
 
-- 📝 Expanded documentation
-- 🎨 UI improvements & dark mode
-- 🌐 Internationalization
-- 📊 Protocol diagrams
-- 🧪 Unit tests
-- 🐛 Bug fixes
+- Expanded documentation
+- UI improvements & dark mode
+- Internationalization
+- Protocol diagrams
+- Unit tests
+- Bug fixes
 
 ---
 
-## 📄 License
+## License
 
 **Code:** MIT License (modify, commercial use allowed)
 
@@ -465,7 +465,7 @@ We welcome contributions! Areas of interest:
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Ultra Ethernet Consortium** — Protocol design & standardization
 - **Linux Foundation** — Governance & stewardship
@@ -474,7 +474,7 @@ We welcome contributions! Areas of interest:
 
 ---
 
-**Built with ❤️ for the next generation of high-performance networks.**
+**Built for the next generation of high-performance networks.**
 
 **[Visit Live Site](https://uet-explorer.vercel.app/) · [GitHub Repo](https://github.com/Necromancer0912/UET-Explorer) · [UEC Specifications](https://ueconference.org)**
 
