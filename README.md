@@ -47,13 +47,6 @@
 - [Advanced Configuration](#-advanced-configuration)
 - [Performance Optimization](#-performance-optimization)
 
-### Deployment & Production
-
-- [Deployment Strategies](#-deployment-strategies)
-- [Production Security](#-production-security)
-- [Monitoring & Analytics](#-monitoring--analytics)
-- [Troubleshooting Guide](#-troubleshooting-guide)
-
 ### Technical Deep Dives
 
 - [UET Protocol Deep Dive](#-uet-protocol-deep-dive)
@@ -304,38 +297,6 @@ To add a new component to the UET hierarchy:
 1. **Edit** `src/data/uetTree.ts`
 2. **Add node** to appropriate parent's `children` array
 3. **Component appears** automatically in tree UI — no component code changes needed!
-
----
-
-## Deployment
-
-### Deploy to Vercel (Recommended)
-
-**Vercel excels at React/Vite apps:**
-
-#### Option A: Via GitHub (Easiest)
-
-1. **Ensure repo is pushed to GitHub:**
-
-   ```bash
-   git push origin main
-   ```
-
-2. **Connect to Vercel:**
-   - Go to [vercel.com/dashboard](https://vercel.com/dashboard)
-   - Click **"Add New" → "Project"**
-   - Select **UET-Explorer** repo
-   - Vercel auto-detects Vite + builds
-   - Deploy! 🚀
-
-3. **Live URL:** `https://uet-explorer.vercel.app/` (automatic)
-
-#### Option B: Via Vercel CLI
-
-```bash
-# Deploy from project root
-vercel --prod
-```
 
 ---
 
