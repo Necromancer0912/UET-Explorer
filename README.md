@@ -1,29 +1,71 @@
 # 🚀 UET Explorer
 
-> **Interactive Technical Architecture Visualizer for Ultra Ethernet Transport — A Next-Generation Network Protocol Reimagining**
+> **Enterprise-Grade Interactive Technical Architecture Visualizer for Ultra Ethernet Transport — The Next-Generation Network Protocol Reimagining High-Performance Distributed Systems**
+
+<div align="center">
 
 [![License: CC BY-ND 4.0](https://img.shields.io/badge/License-CC%20BY--ND%204.0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0/)
-[![Tech Stack: React 19 + TypeScript + Vite](https://img.shields.io/badge/Built%20With-React%2019%20%2B%20TypeScript%20%2B%20Vite-61DAFB?logo=react)](https://react.dev)
-[![UEC Specification: v1.0.2](https://img.shields.io/badge/UEC%20Spec-v1.0.2-009688)](https://www.ueconference.org)
-[![Linux Foundation Project](https://img.shields.io/badge/Linux%20Foundation-Project-FCC624?logo=linux%20foundation)](https://www.linuxfoundation.org)
-[![Built for AI/HPC](https://img.shields.io/badge/Workload-AI%2FHPC%2FMLCOMM-FF6B6B)](https://ueconference.org)
+[![Tech Stack: React 19 + TypeScript + Vite](https://img.shields.io/badge/Built%20With-React%2019%20%2B%20TypeScript%20%2B%20Vite-61DAFB?logo=react&logoColor=white)](https://react.dev)
+[![UEC Specification: v1.0.2](https://img.shields.io/badge/UEC%20Spec-v1.0.2-009688?logo=linux)](https://www.ueconference.org)
+[![Linux Foundation Project](https://img.shields.io/badge/Linux%20Foundation-Steward-FCC624?logo=linux%20foundation&logoColor=white)](https://www.linuxfoundation.org)
+[![Built for AI/HPC](https://img.shields.io/badge/Workload-AI%2FHPC%2FMLCOMM-FF6B6B?logo=nvidia&logoColor=white)](https://ueconference.org)
+[![Deployment: Vercel](https://img.shields.io/badge/Deployment-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com)
+[![Node Requirements](https://img.shields.io/badge/Node-18.0%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Bundle Size](https://img.shields.io/badge/Bundle-511%20kB%20%28163%20kB%20gzip%29-green)](.)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-8.0.1-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
+
+**[🌐 Live Demo](https://uet-explorer.vercel.app/) · [📖 Read the Spec](https://ueconference.org/specifications) · [🐙 GitHub](https://github.com/Necromancer0912/UET-Explorer) · [💬 Discussions](https://github.com/Necromancer0912/UET-Explorer/discussions)**
+
+</div>
 
 ---
 
-## 📋 Table of Contents
+## 📑 Comprehensive Table of Contents
 
-- [🌟 Overview](#-overview)
-- [🎯 What is Ultra Ethernet Transport?](#-what-is-ultra-ethernet-transport)
-- [✨ Features](#-features)
-- [🏗️ Architecture](#-architecture)
-- [📦 Tech Stack](#-tech-stack)
-- [🚀 Getting Started](#-getting-started)
-- [🛠️ Development](#-development)
-- [🌐 Deployment](#-deployment)
-- [📚 UET Technical Deep Dive](#-uet-technical-deep-dive)
-- [🔗 Resources & References](#-resources--references)
-- [📖 Component Reference](#-component-reference)
-- [❓ FAQ](#-faq)
+### Core Sections
+
+- [🌟 Executive Overview](#-executive-overview)
+- [🚀 What is Ultra Ethernet Transport?](#-what-is-ultra-ethernet-transport-uet)
+- [✨ Feature Showcase](#-feature-showcase)
+- [🏗️ System Architecture](#-system-architecture)
+- [📦 Complete Tech Stack](#-complete-tech-stack)
+
+### Getting Started
+
+- [⚡ Quick Start Guide](#-quick-start-guide)
+- [🔧 Detailed Installation](#-detailed-installation)
+- [🖥️ Development Environment Setup](#-development-environment-setup)
+- [🧪 Running Examples](#-running-examples)
+
+### Development & Advanced
+
+- [🛠️ Development Workflow](#-development-workflow)
+- [📝 Code Structure & Organization](#-code-structure--organization)
+- [🎨 Component Development Guide](#-component-development-guide)
+- [🔄 Data Model & State Management](#-data-model--state-management)
+- [⚙️ Advanced Configuration](#-advanced-configuration)
+- [🔍 Performance Optimization](#-performance-optimization)
+
+### Deployment & Production
+
+- [🌐 Deployment Strategies](#-deployment-strategies)
+- [🔐 Production Security](#-production-security)
+- [📊 Monitoring & Analytics](#-monitoring--analytics)
+- [🚨 Troubleshooting Guide](#-troubleshooting-guide)
+
+### Technical Deep Dives
+
+- [📚 UET Protocol Deep Dive](#-uet-protocol-deep-dive)
+- [🔗 Complete Resource Library](#-complete-resource-library)
+- [📖 Component Reference Documentation](#-component-reference-documentation)
+- [❓ Comprehensive FAQ](#-comprehensive-faq)
+
+### Contributing & Community
+
+- [🤝 Contributing Guidelines](#-contributing-guidelines)
+- [📄 Licensing & Legal](#-licensing--legal)
+- [🙏 Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -68,7 +110,7 @@ Traditional networking stacks (TCP/IP, even RDMA) were designed for **general-pu
 ┌─────────────────────────────────────────────────────┐
 │ Application (PyTorch, NCCL, MPI, JAX)               │
 ├─────────────────────────────────────────────────────┤
-│ Libfabric v2.0 (OFI Provider) — User-Space          │
+│ Libfabric v2.0 (OFI Provider) — User-Space         │
 ├─────────────────────────────────────────────────────┤
 │ UET NIC Driver (Control Path Only)                  │
 ├─────────────────────────────────────────────────────┤
