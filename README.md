@@ -170,7 +170,7 @@ Click any component name to jump to its detailed specification page with:
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ Production Build                                        │
-│ (Vercel | Next.js Export | Docker Container)           │
+│ (Vercel | Next.js Export | Docker Container)            │
 └─────────────────────────────────────────────────────────┘
               ↓
 ┌─────────────────────────────────────────────────────────┐
@@ -190,11 +190,11 @@ Click any component name to jump to its detailed specification page with:
               ↓
 ┌─────────────────────────────────────────────────────────┐
 │ Components (Reusable UI Modules)                        │
-│ ├─ MindTreeViewer.tsx    ◄─── Interactive Hierarchy    │
-│ ├─ ThreeScene.tsx        ◄─── 3D Layer Visualizations  │
-│ ├─ Navbar.tsx            ◄─── Navigation Header        │
-│ ├─ SpecificationLinks.tsx ◄─── UEC Spec Downloads      │
-│ └─ Footer.tsx            ◄─── Site Footer              │
+│ ├─ MindTreeViewer.tsx    ◄─── Interactive Hierarchy     │
+│ ├─ ThreeScene.tsx        ◄─── 3D Layer Visualizations   │
+│ ├─ Navbar.tsx            ◄─── Navigation Header         │
+│ ├─ SpecificationLinks.tsx ◄─── UEC Spec Downloads       │
+│ └─ Footer.tsx            ◄─── Site Footer               │
 └─────────────────────────────────────────────────────────┘
               ↓
 ┌─────────────────────────────────────────────────────────┐
