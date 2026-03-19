@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #F5F4F0;
+  --fg: #0A0A0A;
+  --muted: #6B7280;
+  --border: #D1CFCb;
+  --accent: #144BB8;
+  --accent-light: #EEF2FF;
+  --grid-line: rgba(0, 0, 0, 0.055);
+  --font-sans: 'JetBrains Mono', 'IBM Plex Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'calt' 1, 'liga' 1;
+  text-rendering: geometricPrecision;
+  overflow-x: hidden;
+  /* Sutera.ch style: subtle horizontal + vertical grid lines */
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  color: var(--fg);
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* Crosshair markers at grid intersections (via pseudo on body) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.12) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: 32px 32px;
+}
+
+/* Mono label */
+.mono { font-family: var(--font-mono); }
+
+/* Leader line */
+.leader-line {
+  position: absolute;
+  background: var(--border);
+  transform-origin: 0 50%;
+}
+
+/* Clean card */
+.clean-card {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+.clean-card:hover {
+  border-color: var(--accent);
+  background: #ffffff;
+  box-shadow: 0 4px 24px rgba(20, 75, 184, 0.08);
+}
+
+/* Nav thin border */
+.nav-border { border-bottom: 1px solid var(--border); }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
