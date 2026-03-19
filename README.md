@@ -168,28 +168,47 @@ Click any component name to jump to its detailed specification page with:
 ### Application Structure
 
 ```
-uet-explorer/
-├── src/
-│   ├── pages/
-│   │   ├── LandingPage.tsx       # Hero + layer showcase + hierarchy tree
-│   │   └── NodePage.tsx          # Detailed specification view
-│   ├── components/
-│   │   ├── MindTreeViewer.tsx    # Interactive hierarchy component
-│   │   ├── ThreeScene.tsx        # 3D layer visualizations
-│   │   ├── Navbar.tsx            # Navigation header
-│   │   ├── SpecificationLinks.tsx # UEC spec download area
-│   │   └── Footer.tsx            # Site footer
-│   ├── data/
-│   │   └── uetTree.ts            # Complete UET component tree (1000+ lines)
-│   ├── App.tsx                   # Main router
-│   ├── main.tsx                  # Entry point
-│   └── index.css                 # Global styles
-├── public/
-│   └── illustrations/            # SVG assets
-├── package.json                  # Dependencies
-├── vite.config.ts                # Vite build config
-├── tsconfig.json                 # TypeScript config
-└── vercel.json                   # Vercel deployment config
+┌─────────────────────────────────────────────────────────┐
+│ Production Build                                        │
+│ (Vercel | Next.js Export | Docker Container)           │
+└─────────────────────────────────────────────────────────┘
+              ↓
+┌─────────────────────────────────────────────────────────┐
+│ React Application Layer                                 │
+│ ├─ App.tsx (Main Router + Layout)                       │
+│ ├─ main.tsx (Entry Point + Hydration)                   │
+│ └─ index.css (Global Styles)                            │
+└─────────────────────────────────────────────────────────┘
+              ↓
+┌──────────────────────────────────┬──────────────────────┐
+│ Pages (Route Handlers)           │ Config & Build       │
+│ ├─ LandingPage.tsx               │ ├─ package.json      │
+│ │  └─ Hero + Hierarchy Tree      │ ├─ vite.config.ts    │
+│ └─ NodePage.tsx                  │ ├─ tsconfig.json     │
+│    └─ Spec Details View          │ └─ vercel.json       │
+└──────────────────────────────────┴──────────────────────┘
+              ↓
+┌─────────────────────────────────────────────────────────┐
+│ Components (Reusable UI Modules)                        │
+│ ├─ MindTreeViewer.tsx    ◄─── Interactive Hierarchy    │
+│ ├─ ThreeScene.tsx        ◄─── 3D Layer Visualizations  │
+│ ├─ Navbar.tsx            ◄─── Navigation Header        │
+│ ├─ SpecificationLinks.tsx ◄─── UEC Spec Downloads      │
+│ └─ Footer.tsx            ◄─── Site Footer              │
+└─────────────────────────────────────────────────────────┘
+              ↓
+┌─────────────────────────────────────────────────────────┐
+│ Data Layer                                              │
+│ ├─ uetTree.ts  (1000+ lines)                            │
+│ │  └─ Complete UET Component Tree (Recursive Structure) │
+│ └─ assets/ (Images, Icons)                              │
+└─────────────────────────────────────────────────────────┘
+              ↓
+┌─────────────────────────────────────────────────────────┐
+│ Static Assets                                           │
+│ └─ public/                                              │
+│    └─ illustrations/  (SVG Files)                       │
+└─────────────────────────────────────────────────────────┘
 ```
 
 ### Data Model: `uetTree.ts`
