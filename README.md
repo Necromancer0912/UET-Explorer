@@ -15,7 +15,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-8.0.1-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
 
-**[Live Demo](https://uet-explorer.vercel.app/) · [Read the Spec](https://ueconference.org/specifications) · [GitHub](https://github.com/Necromancer0912/UET-Explorer) · [Discussions](https://github.com/Necromancer0912/UET-Explorer/discussions)**
+**[Live Demo](https://uetexplorer.vercel.app/) · [Read the Spec](https://ueconference.org/specifications) · [GitHub](https://github.com/Necromancer0912/UET-Explorer) · [Discussions](https://github.com/Necromancer0912/UET-Explorer/discussions)**
 
 </div>
 
@@ -456,7 +456,7 @@ We welcome contributions! Areas of interest:
 
 **Built for the next generation of high-performance networks.**
 
-**[Visit Live Site](https://uet-explorer.vercel.app/) · [GitHub Repo](https://github.com/Necromancer0912/UET-Explorer) · [UEC Specifications](https://ueconference.org)**
+**[Visit Live Site](https://uetexplorer.vercel.app/) · [GitHub Repo](https://github.com/Necromancer0912/UET-Explorer) · [UEC Specifications](https://ueconference.org)**
 
 - techDetails for section-anchored technical bullets
 - algorithms, details, and optional children
