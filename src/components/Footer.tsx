@@ -7,7 +7,9 @@ const Footer = () => {
       style={{
         marginTop: '1.75rem',
         borderTop: '1px solid rgba(10,10,10,0.12)',
-        background: 'rgba(255,255,255,0.92)',
+        background: 'rgba(255,255,255,0.5)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
       }}
     >
       <div
@@ -60,11 +62,13 @@ const Footer = () => {
               textTransform: 'uppercase',
               color: '#111827',
               border: '1px solid rgba(0,0,0,0.25)',
-              background: 'rgba(255,255,255,0.9)',
+              background: 'rgba(255,255,255,0.5)',
               borderRadius: 8,
               padding: '0.7rem 1rem',
               transition: 'all 0.22s ease',
               boxShadow: '0 8px 20px rgba(0,0,0,0.1)',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-2px)';
@@ -73,7 +77,7 @@ const Footer = () => {
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.background = 'rgba(255,255,255,0.9)';
+              e.currentTarget.style.background = 'rgba(255,255,255,0.5)';
               e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.1)';
             }}
           >
