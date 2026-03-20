@@ -11,6 +11,7 @@ const LEGACY_IMAGES = [
   '/illustrations/physical.png',
 ];
 const ALL_SCENE_IMAGES = [...NUMBERED_IMAGES, ...EXTRA_IMAGES, ...LEGACY_IMAGES];
+const SESSION_IMAGE_OFFSET = Math.floor(Math.random() * ALL_SCENE_IMAGES.length);
 
 const PINNED_IMAGES: Record<string, string> = {
   uet: '/illustrations/1.png',
@@ -37,9 +38,12 @@ const hashNodeId = (id: string) => {
 
 const resolveIllustration = (nodeId?: string, index = 0, type: 'hero' | 'card' | 'slab' = 'card') => {
   if (nodeId && PINNED_IMAGES[nodeId]) return PINNED_IMAGES[nodeId];
-  if (nodeId) return ALL_SCENE_IMAGES[hashNodeId(nodeId) % ALL_SCENE_IMAGES.length];
+  if (nodeId) {
+    const randomizedIdx = (hashNodeId(nodeId) + SESSION_IMAGE_OFFSET) % ALL_SCENE_IMAGES.length;
+    return ALL_SCENE_IMAGES[randomizedIdx];
+  }
   if (type === 'hero') return '/illustrations/hero.png';
-  return ALL_SCENE_IMAGES[Math.abs(index) % ALL_SCENE_IMAGES.length];
+  return ALL_SCENE_IMAGES[(Math.abs(index) + SESSION_IMAGE_OFFSET) % ALL_SCENE_IMAGES.length];
 };
 
 interface ThreeSceneProps {
