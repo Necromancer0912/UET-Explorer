@@ -7,7 +7,7 @@ const Footer = () => {
       style={{
         marginTop: '1.75rem',
         borderTop: '1px solid rgba(10,10,10,0.12)',
-        background: 'radial-gradient(circle at 20% -50%, rgba(37,99,235,0.16), rgba(255,255,255,0.65) 45%, rgba(255,255,255,0.92) 100%)',
+        background: 'rgba(255,255,255,0.92)',
       }}
     >
       <div
@@ -115,7 +115,7 @@ const Footer = () => {
             e.currentTarget.style.textDecorationColor = '#1D4ED8';
           }}
         >
-          crafted for protocol exploration and high-performance systems visualization
+          crafted for uet exploration and nic modeling
         </a>
       </div>
     </footer>
