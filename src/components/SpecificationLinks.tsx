@@ -26,9 +26,9 @@ const SpecificationLinks = () => {
     >
       <div
         style={{
-          border: '1px solid rgba(20,75,184,0.16)',
+          border: '1px solid rgba(10,10,10,0.14)',
           borderRadius: 10,
-            background: 'rgba(255,255,255,0.86)',
+          background: 'rgba(255,255,255,0.9)',
           padding: '1.5rem',
         }}
       >
@@ -68,13 +68,15 @@ const SpecificationLinks = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.borderColor = '#144BB8';
-                e.currentTarget.style.boxShadow = '0 10px 24px rgba(20,75,184,0.12)';
+                e.currentTarget.style.borderColor = 'rgba(10,10,10,0.35)';
+                e.currentTarget.style.boxShadow = '0 10px 24px rgba(0,0,0,0.12)';
+                e.currentTarget.style.background = 'rgba(250,250,250,0.96)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0px)';
                 e.currentTarget.style.borderColor = 'rgba(10,10,10,0.08)';
                 e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.background = 'rgba(255,255,255,0.8)';
               }}
             >
               <p
@@ -102,7 +104,11 @@ const SpecificationLinks = () => {
                 style={{
                   fontFamily: MONO_STACK,
                   fontSize: 10,
-                  color: '#144BB8',
+                  color: '#111827',
+                  border: '1px solid rgba(0,0,0,0.18)',
+                  background: 'rgba(0,0,0,0.03)',
+                  borderRadius: 3,
+                  padding: '0.2rem 0.45rem',
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
                 }}

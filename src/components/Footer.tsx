@@ -27,7 +27,7 @@ const Footer = () => {
                 fontSize: 10,
                 letterSpacing: '0.16em',
                 textTransform: 'uppercase',
-                color: '#64748B',
+                color: '#6B7280',
                 marginBottom: '0.4rem',
               }}
             >
@@ -58,23 +58,23 @@ const Footer = () => {
               fontWeight: 700,
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
-              color: '#0B3AA4',
-              border: '1px solid rgba(11,58,164,0.36)',
-              background: 'rgba(255,255,255,0.76)',
+              color: '#111827',
+              border: '1px solid rgba(0,0,0,0.25)',
+              background: 'rgba(255,255,255,0.9)',
               borderRadius: 8,
               padding: '0.7rem 1rem',
               transition: 'all 0.22s ease',
-              boxShadow: '0 8px 22px rgba(11,58,164,0.10)',
+              boxShadow: '0 8px 20px rgba(0,0,0,0.1)',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.background = 'rgba(37,99,235,0.08)';
-              e.currentTarget.style.boxShadow = '0 12px 28px rgba(37,99,235,0.18)';
+              e.currentTarget.style.background = 'rgba(0,0,0,0.04)';
+              e.currentTarget.style.boxShadow = '0 12px 24px rgba(0,0,0,0.16)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.background = 'rgba(255,255,255,0.76)';
-              e.currentTarget.style.boxShadow = '0 8px 22px rgba(11,58,164,0.10)';
+              e.currentTarget.style.background = 'rgba(255,255,255,0.9)';
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.1)';
             }}
           >
             Visit GitHub Profile
@@ -102,16 +102,16 @@ const Footer = () => {
             textUnderlineOffset: '8px',
             textDecorationThickness: '2px',
             transition: 'transform 0.28s ease, color 0.28s ease, text-decoration-color 0.28s ease',
-            textShadow: '0 10px 24px rgba(29,78,216,0.14)',
+            textShadow: '0 10px 20px rgba(0,0,0,0.1)',
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-2px)';
-            e.currentTarget.style.color = '#1D4ED8';
-            e.currentTarget.style.textDecorationColor = '#2563EB';
+            e.currentTarget.style.color = '#111827';
+            e.currentTarget.style.textDecorationColor = '#1D4ED8';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.color = '#0F172A';
+            e.currentTarget.style.color = '#111827';
             e.currentTarget.style.textDecorationColor = '#1D4ED8';
           }}
         >
