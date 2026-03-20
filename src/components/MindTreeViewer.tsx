@@ -15,7 +15,6 @@ interface MindTreeNodeProps {
 }
 
 const DEPTH_COLORS = ['#1F2937', '#374151', '#6B7280', '#9CA3AF'];
-const DEPTH_BACKGROUNDS = ['rgba(31,41,55,0.08)', 'rgba(55,65,81,0.06)', 'rgba(107,114,128,0.04)', 'rgba(156,163,175,0.02)'];
 
 const MindTreeNode = ({
   node,
@@ -29,7 +28,6 @@ const MindTreeNode = ({
   const isRoot = depth === 0;
 
   const depthColor = DEPTH_COLORS[Math.min(depth, DEPTH_COLORS.length - 1)];
-  const depthBackground = DEPTH_BACKGROUNDS[Math.min(depth, DEPTH_BACKGROUNDS.length - 1)];
   const paddingLeft = isRoot ? 0 : depth * 28;
   const connectorStyle = !isRoot ? {
     position: 'absolute' as const,
@@ -99,7 +97,7 @@ const MindTreeNode = ({
             padding: isRoot ? '1.25rem 1.25rem' : '0.65rem 1rem',
             borderRadius: isRoot ? 8 : 6,
             border: `1.5px solid ${depthColor}${isRoot ? '30' : '20'}`,
-            background: isRoot ? `${depthColor}08` : depthBackground,
+            background: 'transparent',
             cursor: 'pointer',
             flex: 1,
             transition: 'all 0.2s',
@@ -107,10 +105,12 @@ const MindTreeNode = ({
             alignItems: 'center',
             justifyContent: 'space-between',
             gap: '0.75rem',
+            backdropFilter: 'blur(6px)',
+            WebkitBackdropFilter: 'blur(6px)',
           }}
           whileHover={{
             borderColor: depthColor,
-            background: `${depthColor}15`,
+            background: 'transparent',
             boxShadow: `0 6px 16px ${depthColor}20`,
           }}
         >
@@ -158,7 +158,8 @@ const MindTreeNode = ({
                 opacity: 0.8,
                 letterSpacing: '0.05em',
                 whiteSpace: 'nowrap',
-                background: `${depthColor}15`,
+                background: 'transparent',
+                border: `1px solid ${depthColor}30`,
                 padding: isRoot ? '0.3rem 0.6rem' : '0.2rem 0.4rem',
                 borderRadius: 3,
                 fontWeight: 600,
