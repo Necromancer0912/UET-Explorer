@@ -1,6 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 
 const NUMBERED_IMAGES = Array.from({ length: 27 }, (_, i) => `/illustrations/${i + 1}.png`);
+const EXTRA_IMAGES = Array.from({ length: 16 }, (_, i) => `/illustrations/extra${i + 1}.png`);
+const LEGACY_IMAGES = [
+  '/illustrations/hero.png',
+  '/illustrations/software.png',
+  '/illustrations/transport.png',
+  '/illustrations/network.png',
+  '/illustrations/link.png',
+  '/illustrations/physical.png',
+];
+const ALL_SCENE_IMAGES = [...NUMBERED_IMAGES, ...EXTRA_IMAGES, ...LEGACY_IMAGES];
 
 const PINNED_IMAGES: Record<string, string> = {
   uet: '/illustrations/1.png',
@@ -27,9 +37,9 @@ const hashNodeId = (id: string) => {
 
 const resolveIllustration = (nodeId?: string, index = 0, type: 'hero' | 'card' | 'slab' = 'card') => {
   if (nodeId && PINNED_IMAGES[nodeId]) return PINNED_IMAGES[nodeId];
-  if (nodeId) return NUMBERED_IMAGES[hashNodeId(nodeId) % NUMBERED_IMAGES.length];
-  if (type === 'hero') return '/illustrations/1.png';
-  return NUMBERED_IMAGES[Math.abs(index) % NUMBERED_IMAGES.length];
+  if (nodeId) return ALL_SCENE_IMAGES[hashNodeId(nodeId) % ALL_SCENE_IMAGES.length];
+  if (type === 'hero') return '/illustrations/hero.png';
+  return ALL_SCENE_IMAGES[Math.abs(index) % ALL_SCENE_IMAGES.length];
 };
 
 interface ThreeSceneProps {
