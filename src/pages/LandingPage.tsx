@@ -8,16 +8,6 @@ import MindTreeViewer from '../components/MindTreeViewer';
 import { uetTree } from '../data/uetTree';
 
 const MONO_STACK = 'JetBrains Mono, IBM Plex Mono, Fira Code, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace';
-const ALL_ILLUSTRATIONS = [
-  ...Array.from({ length: 27 }, (_, i) => `/illustrations/${i + 1}.png`),
-  ...Array.from({ length: 16 }, (_, i) => `/illustrations/extra${i + 1}.png`),
-  '/illustrations/hero.png',
-  '/illustrations/software.png',
-  '/illustrations/transport.png',
-  '/illustrations/network.png',
-  '/illustrations/link.png',
-  '/illustrations/physical.png',
-];
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -199,80 +189,6 @@ const LandingPage = () => {
       </section>
 
       <SpecificationLinks />
-
-      {/* ── Full Illustration Library ─────────────────────────── */}
-      <section style={{ maxWidth: 1320, margin: '0 auto', padding: '0 3rem 4rem' }}>
-        <div
-          style={{
-            border: '1px solid rgba(0,0,0,0.08)',
-            borderRadius: 10,
-            background: 'rgba(255,255,255,0.82)',
-            padding: '1.5rem',
-          }}
-        >
-          <p
-            style={{
-              fontFamily: MONO_STACK,
-              fontSize: 11,
-              color: '#6B7280',
-              letterSpacing: '0.14em',
-              textTransform: 'uppercase',
-              marginBottom: '0.9rem',
-            }}
-          >
-            Complete Illustration Library
-          </p>
-          <p style={{ fontSize: 12.5, color: '#6B7280', lineHeight: 1.7, marginBottom: '1.2rem' }}>
-            All illustration assets from the folder are displayed below.
-          </p>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))',
-              gap: '0.65rem',
-            }}
-          >
-            {ALL_ILLUSTRATIONS.map((src, idx) => (
-              <div
-                key={src}
-                style={{
-                  border: '1px solid rgba(20,75,184,0.14)',
-                  borderRadius: 8,
-                  background: 'rgba(20,75,184,0.03)',
-                  padding: '0.4rem',
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: MONO_STACK,
-                    fontSize: 9,
-                    color: '#9CA3AF',
-                    letterSpacing: '0.06em',
-                    marginBottom: '0.3rem',
-                    textAlign: 'center',
-                  }}
-                >
-                  IMAGE {idx + 1}
-                </div>
-                <img
-                  src={src}
-                  alt={`Illustration ${idx + 1}`}
-                  loading="lazy"
-                  style={{
-                    width: '100%',
-                    aspectRatio: '1 / 1',
-                    objectFit: 'contain',
-                    display: 'block',
-                    borderRadius: 4,
-                    background: 'rgba(255,255,255,0.8)',
-                  }}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
