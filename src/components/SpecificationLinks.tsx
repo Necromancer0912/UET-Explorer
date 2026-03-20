@@ -28,7 +28,7 @@ const SpecificationLinks = () => {
         style={{
           border: '1px solid rgba(10,10,10,0.14)',
           borderRadius: 10,
-          background: 'rgba(255,255,255,0.52)',
+          background: 'transparent',
           padding: '1.5rem',
           backdropFilter: 'blur(12px)',
           WebkitBackdropFilter: 'blur(12px)',
@@ -65,7 +65,7 @@ const SpecificationLinks = () => {
                 border: '1px solid rgba(10,10,10,0.08)',
                 borderRadius: 8,
                 padding: '1rem 1rem 0.9rem',
-                background: 'rgba(255,255,255,0.48)',
+                background: 'transparent',
                 transition: 'transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease',
                 display: 'block',
                 backdropFilter: 'blur(8px)',
@@ -75,13 +75,13 @@ const SpecificationLinks = () => {
                 e.currentTarget.style.transform = 'translateY(-2px)';
                 e.currentTarget.style.borderColor = 'rgba(10,10,10,0.35)';
                 e.currentTarget.style.boxShadow = '0 10px 24px rgba(0,0,0,0.12)';
-                e.currentTarget.style.background = 'rgba(250,250,250,0.62)';
+                e.currentTarget.style.background = 'transparent';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0px)';
                 e.currentTarget.style.borderColor = 'rgba(10,10,10,0.08)';
                 e.currentTarget.style.boxShadow = 'none';
-                e.currentTarget.style.background = 'rgba(255,255,255,0.48)';
+                e.currentTarget.style.background = 'transparent';
               }}
             >
               <p

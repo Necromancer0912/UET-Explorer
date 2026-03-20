@@ -272,7 +272,7 @@ const MindTreeViewer = () => {
         style={{
           padding: '1.75rem',
           borderRadius: 10,
-          background: 'rgba(255,255,255,0.52)',
+          background: 'transparent',
           border: '1px solid rgba(0,0,0,0.12)',
           boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.04), 0 10px 24px rgba(0,0,0,0.08)',
           backdropFilter: 'blur(12px)',
@@ -294,7 +294,7 @@ const MindTreeViewer = () => {
           marginTop: '2rem',
           padding: '1rem 1.5rem',
           borderRadius: 6,
-          background: 'rgba(255,255,255,0.45)',
+          background: 'transparent',
           border: '1px solid rgba(0,0,0,0.14)',
           boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
           backdropFilter: 'blur(10px)',
