@@ -6,14 +6,12 @@ const SPEC_LINKS = [
     description: 'Authoritative overview and publication context from the Ultra Ethernet Consortium.',
     href: 'https://ultraethernet.org/uec-specification/',
     cta: 'Open Specification',
-    image: '/illustrations/26.png',
   },
   {
     title: 'Ultra Ethernet Website',
     description: 'Explore consortium updates, architecture material, and ecosystem resources.',
     href: 'https://ultraethernet.org/',
     cta: 'Visit Website',
-    image: '/illustrations/27.png',
   },
 ];
 
@@ -79,28 +77,6 @@ const SpecificationLinks = () => {
                 e.currentTarget.style.boxShadow = 'none';
               }}
             >
-              <div
-                style={{
-                  border: '1px solid rgba(20,75,184,0.14)',
-                  borderRadius: 6,
-                  background: 'rgba(20,75,184,0.03)',
-                  padding: '0.45rem',
-                  marginBottom: '0.8rem',
-                  height: 128,
-                }}
-              >
-                <img
-                  src={link.image}
-                  alt={link.title}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'contain',
-                    userSelect: 'none',
-                    pointerEvents: 'none',
-                  }}
-                />
-              </div>
               <p
                 style={{
                   fontSize: 15,
