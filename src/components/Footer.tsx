@@ -119,7 +119,7 @@ const Footer = () => {
             e.currentTarget.style.textDecorationColor = '#1D4ED8';
           }}
         >
-          crafted for uet exploration and nic modeling
+          crafted for Ultra Ethernet exploration and NIC modeling
         </a>
       </div>
     </footer>
