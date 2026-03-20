@@ -1,77 +1,36 @@
 import React, { useEffect, useRef } from 'react';
 
-// New image set is prioritized for top-level and mid-level nodes.
-const LAYER_IMAGES: Record<string, string> = {
-  // root + primary layers (less deep)
-  uet: '/illustrations/hero.png',
-  software: '/illustrations/extra2.png',
-  transport: '/illustrations/extra3.png',
-  network: '/illustrations/extra4.png',
-  link: '/illustrations/extra5.png',
-  physical: '/illustrations/extra6.png',
+const NUMBERED_IMAGES = Array.from({ length: 27 }, (_, i) => `/illustrations/${i + 1}.png`);
 
-  // major second-level sections
-  libfabric: '/illustrations/extra7.png',
-  'collective-ops': '/illustrations/extra8.png',
-  ses: '/illustrations/extra9.png',
-  pds: '/illustrations/extra10.png',
-  cms: '/illustrations/extra11.png',
-  tss: '/illustrations/extra12.png',
-  'packet-spray': '/illustrations/extra13.png',
-  'fabric-topology': '/illustrations/extra14.png',
-  llr: '/illustrations/extra15.png',
-  fec: '/illustrations/extra16.png',
-  'control-plane': '/illustrations/extra1.png',
-  pcm: '/illustrations/extra11.png',
-  'qos-queues': '/illustrations/extra4.png',
-  cbfc: '/illustrations/extra5.png',
-  'ctlos-faults': '/illustrations/extra6.png',
-  'software-math-models': '/illustrations/extra7.png',
-  'transport-math-models': '/illustrations/extra8.png',
-  'network-math-models': '/illustrations/extra9.png',
-  'link-math-models': '/illustrations/extra10.png',
-  'physical-math-models': '/illustrations/extra12.png',
-  'discovery-completion-apis': '/illustrations/extra13.png',
-  'tx-rx-queues-mr': '/illustrations/extra14.png',
-  'wire-protocol-mapping': '/illustrations/extra15.png',
-  'ofi-error-codes': '/illustrations/extra16.png',
-  'lldp-org-tlvs': '/illustrations/extra1.png',
-  'ofi-api-semantics': '/illustrations/extra7.png',
-  'linux-control-api': '/illustrations/extra10.png',
-  'ses-header-formats': '/illustrations/extra9.png',
-  'pds-headers-control-packets': '/illustrations/extra10.png',
-  'cc-telemetry-modes': '/illustrations/extra11.png',
-  'secure-domain-kdf-replay': '/illustrations/extra12.png',
-  'cbfc-operations-messages': '/illustrations/extra5.png',
-  'profile-negotiation-config': '/illustrations/extra2.png',
-  'jobid-auth-flows': '/illustrations/extra3.png',
-  'ofi-object-api-sequence': '/illustrations/extra7.png',
-  'ses-addressing-identifiers': '/illustrations/extra9.png',
-  'fi-eq-open': '/illustrations/extra7.png',
-  'fi-domain': '/illustrations/extra7.png',
-  'fi-mr-reg-key': '/illustrations/extra10.png',
-  'fi-ep-bind': '/illustrations/extra10.png',
-  'fi-getname': '/illustrations/extra14.png',
-  'fi-cq-cntr-open': '/illustrations/extra13.png',
-  'ses-send-types': '/illustrations/extra9.png',
-  'ses-write-read-types': '/illustrations/extra9.png',
-  'ses-atomic-response-types': '/illustrations/extra11.png',
-  'ses-ordering-completion': '/illustrations/extra12.png',
-  'pds-header-format-catalog': '/illustrations/extra10.png',
-  'pds-field-catalog': '/illustrations/extra10.png',
-  'pds-ack-cack-sack-catalog': '/illustrations/extra13.png',
-  'pds-control-packet-catalog': '/illustrations/extra14.png',
+const PINNED_IMAGES: Record<string, string> = {
+  uet: '/illustrations/1.png',
+  software: '/illustrations/2.png',
+  transport: '/illustrations/3.png',
+  network: '/illustrations/4.png',
+  link: '/illustrations/5.png',
+  physical: '/illustrations/6.png',
+  libfabric: '/illustrations/7.png',
+  'collective-ops': '/illustrations/8.png',
+  ses: '/illustrations/9.png',
+  pds: '/illustrations/10.png',
+  cms: '/illustrations/11.png',
+  tss: '/illustrations/12.png',
 };
 
-// Legacy/base set reused for deeper/fallback visuals.
-const CARD_IMAGES = [
-  '/illustrations/software.png',
-  '/illustrations/transport.png',
-  '/illustrations/network.png',
-  '/illustrations/link.png',
-  '/illustrations/physical.png',
-  '/illustrations/extra1.png',
-];
+const hashNodeId = (id: string) => {
+  let hash = 0;
+  for (let i = 0; i < id.length; i += 1) {
+    hash = (hash * 31 + id.charCodeAt(i)) >>> 0;
+  }
+  return hash;
+};
+
+const resolveIllustration = (nodeId?: string, index = 0, type: 'hero' | 'card' | 'slab' = 'card') => {
+  if (nodeId && PINNED_IMAGES[nodeId]) return PINNED_IMAGES[nodeId];
+  if (nodeId) return NUMBERED_IMAGES[hashNodeId(nodeId) % NUMBERED_IMAGES.length];
+  if (type === 'hero') return '/illustrations/1.png';
+  return NUMBERED_IMAGES[Math.abs(index) % NUMBERED_IMAGES.length];
+};
 
 interface ThreeSceneProps {
   color?: string;
@@ -129,18 +88,7 @@ export const ThreeScene: React.FC<ThreeSceneProps> = ({
 
   useEffect(() => { injectStyles(); }, []);
 
-  // Pick the right image
-  let imgSrc: string;
-  if (nodeId && LAYER_IMAGES[nodeId]) {
-    imgSrc = LAYER_IMAGES[nodeId];
-  } else if (type === 'hero') {
-    imgSrc = '/illustrations/hero.png';
-  } else if (type === 'card') {
-    imgSrc = CARD_IMAGES[index % CARD_IMAGES.length];
-  } else {
-    // slab — pick by index cycling through layers
-    imgSrc = CARD_IMAGES[index % CARD_IMAGES.length];
-  }
+  const imgSrc = resolveIllustration(nodeId, index, type);
 
   // Stagger delay slightly per index so multiple cards float at different phases
   const delay = (index % 5) * 0.4;
